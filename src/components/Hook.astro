@@ -1,0 +1,60 @@
+<div id="hook" class="hook">
+    <div id="text">
+        <h1>Book Now with Top Shelf!</h1>
+        <p>Top Shelf Chauffeur is one of the premier chauffer companies in Houston and we strive to give our "Shelfies" the best possible experience.</p>
+    </div>
+</div>
+
+<style>
+    .hook {
+        background-image: url('/Users/wyatt/Desktop/CodeShit/Websites/Top Shelf Chauffer v2/Top Shelf Chauffer Astro/src/images/Escalade.jpg');
+        background-size: cover;
+        min-height: 100vh;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #text {
+        margin: 0 auto;
+        padding: 25px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: black;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 25px;
+    }
+
+    .hook h1 {
+        margin: 0 auto;
+        margin-bottom: 25px;
+        width: 80%;
+        height: auto;
+        font-size: 5rem;
+    }
+
+    .hook p {
+        margin: 25px auto 0;
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    @media(max-width: 650px) {
+        .hook h1 {
+            font-size: 4rem;
+        }
+    }
+
+    @media(max-width: 970px) {
+        #text {
+            margin-top: 10vh;
+        }
+
+        #text h1, #text p {
+            width: 95%;
+        }
+    }
+</style>

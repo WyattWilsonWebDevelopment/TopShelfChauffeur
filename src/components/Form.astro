@@ -1,0 +1,144 @@
+---
+interface Props {
+    title: string
+}
+
+const { title } = Astro.props;
+---
+
+<div class="container">
+    <div id="form-container">
+        <h1 id="header">{ title }</h1>
+        <form action="https://formspree.io/f/xleybznd" method="post">
+            <div id="form-div">
+                <input id="name" name="Name" type="text" placeholder="First and Last Name" />
+                <input id="phone" name="Phone Number" type="text" placeholder="Phone Number" />
+                <input id="email" name="Email" type="email" placeholder="Email" />
+                <input id="MoC" name="Preferred Method of Contact" type="text" placeholder="Preferred Method of Contact" />
+                <input id="date" name="Date of Service" type="text" placeholder="Date of Service" onfocus="(this.type='date')"/>
+                <input id="start" name="Start Time" type="text" placeholder="Start Time" onfocus="(this.type='time')"/>
+                <input id="end" name="End Time" type="text" placeholder="End Time" onfocus="(this.type='time')"/>
+                <textarea id="address" name="Address" rows="7" placeholder="Please specify the address of pick up, drop off, or anywhere inbetween."></textarea>
+                <input id="submit" type="submit" />
+            </div>
+        </form>
+    </div>
+    <div id="paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora necessitatibus dicta eveniet. Reiciendis deleniti optio consectetur hic laborum nemo, assumenda ut asperiores vitae dolore qui eligendi. Quas dolorem quaerat ipsa.</p>
+    </div>
+</div>
+
+<style>
+    .container {
+        overflow-y: hidden;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: white;
+        background-color: black;
+    }
+
+    #form-container {
+        margin: 0;
+        width: 45vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header {
+        margin: 10vh auto 25px;
+        padding: 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #paragraph {
+        margin: 0;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 100%;
+        background-image: url('/Users/wyatt/Desktop/CodeShit/Websites/Top Shelf Chauffer v2/Top Shelf Chauffer Astro/src/images/DSC_0411.JPG');
+        background-size: cover;
+        font-size: 2rem;
+    }
+
+    p {
+        padding: 25px;
+        width: 80%;
+        color: black;
+        background-color: rgba(218,165,32,0.78);
+        border-radius: 25px;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #form-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input, textarea {
+        margin: 12px auto;
+        padding: 5px;
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    textarea {
+        margin-bottom: 40px;
+    }
+
+    #submit {
+        margin: 5px auto 25px;
+        width: 40%;
+        height: 60px;
+        color: black;
+        background-color: goldenrod;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 7px;
+    }
+
+    @media(max-width: 650px) {
+
+        #card {
+            width: 80vw;
+        }
+
+        input, textarea {
+            width: 80%;
+        }
+    }
+
+    @media(max-width: 1140px) {
+        #form-container {
+            width: 100%;
+        }
+
+        #paragraph {
+            display: none;
+        }
+    }
+
+    @media(max-height: 850px) {
+        .container {
+            overflow-y: visible;
+        }
+    }
+</style>
