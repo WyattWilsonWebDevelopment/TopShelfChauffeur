@@ -1,7 +1,7 @@
 <div class="background">
     <div id="airport-container" class="option-panel">
         <h1 class="option-header">Airport Transportation</h1>
-        <p class="option-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, eveniet voluptate, molestiae dolorem soluta mollitia officiis quis iure laborum saepe ducimus ullam omnis aspernatur expedita quo? Illo saepe ut quidem!</p>
+        <p class="option-paragraph">Remove the stress of driving, parking, traffic, etc. Our chauffers are much more than just drivers & will take care of all baggage and anything else needed.<br /><span>*Anywhere in Houston to any airport in Houston.</span></p>
         <div class="button-container">
             <button class="option-button">
                 <a class="option-link" href="/airport">Book</a>
@@ -10,7 +10,7 @@
     </div>
     <div id="intown-container" class="option-panel">
         <h1 class="option-header">Service in Houston</h1>
-        <p class="option-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, eveniet voluptate, molestiae dolorem soluta mollitia officiis quis iure laborum saepe ducimus ullam omnis aspernatur expedita quo? Illo saepe ut quidem!</p>
+        <p class="option-paragraph">From leaving a lasting impression to reducing the stress of transportation or even an experience to remember forever, we got you covered! Birthdays, weddings, date nights, party nights, business errands, funerals, shopping, YOU NAME IT!</p>
         <div class="button-container">
             <button class="option-button">
                 <a class="option-link" href="/intown">Book</a>
@@ -19,7 +19,7 @@
     </div>
     <div id="outoftown-container" class="option-panel">
         <h1 class="option-header">Service Out of Town/State</h1>
-        <p class="option-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, eveniet voluptate, molestiae dolorem soluta mollitia officiis quis iure laborum saepe ducimus ullam omnis aspernatur expedita quo? Illo saepe ut quidem!</p>
+        <p class="option-paragraph">Road trips, family vacations, business travel, anything you can may need out of town we will make it happen!</p>
         <div class="button-container">
             <button class="option-button">
                 <a class="option-link" href="/outoftown">Book</a>
@@ -61,6 +61,10 @@
         font-size: 1.5rem;
     }
 
+    span {
+        font-weight: 800;
+    }
+
     .button-container {
         width: 100%;
         height: calc(100% - 40vh - 50px);
@@ -86,7 +90,15 @@
     }
 
     #intown-container button{
-        top: 50%;
+        top: 35%;
+    }
+
+    #outoftown-container .button-container {
+        height: 100%;
+    }
+
+    #outoftown-container button {
+        top: 35%;
     }
 
     a, a:visited, a:link {

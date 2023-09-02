@@ -19,23 +19,24 @@ const { title } = Astro.props;
                 <input id="start" name="Start Time" type="text" placeholder="Start Time" onfocus="(this.type='time')"/>
                 <input id="end" name="End Time" type="text" placeholder="End Time" onfocus="(this.type='time')"/>
                 <textarea id="address" name="Address" rows="7" placeholder="Please specify the address of pick up, drop off, or anywhere inbetween."></textarea>
+                <textarea id="services" name="Services" rows="7" placeholder="Please specify if you want a protection officer, photographer, or videographer and for how much of the trip."></textarea>
                 <input id="submit" type="submit" />
             </div>
         </form>
     </div>
     <div id="paragraph">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora necessitatibus dicta eveniet. Reiciendis deleniti optio consectetur hic laborum nemo, assumenda ut asperiores vitae dolore qui eligendi. Quas dolorem quaerat ipsa.</p>
+        <p>-Expect to hear back regarding your booking within just hours from submitting! for immediate bookings call (281)-896-7557<br />-50% non-refundable deposit required to secure your booking<br />-Protection officers, photographers, & videographers available for parts or all of your booking... if needing any of this please mention in the form.<br />-Thank you for booking with TSC!</p>
     </div>
 </div>
 
 <style>
     .container {
-        overflow-y: hidden;
+        overflow-y: scroll;
         width: 100vw;
         height: 100vh;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         color: white;
         background-color: black;
@@ -50,19 +51,19 @@ const { title } = Astro.props;
 
     #header {
         margin: 10vh auto 25px;
-        padding: 0;
+        height: 12vh;
         text-align: center;
         font-size: 3rem;
     }
 
-    #paragraph {
+    #paragraph {  
         margin: 0;
         padding: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 50vw;
-        height: 100%;
+        height: 100vh;
         background-image: url('/Users/wyatt/Desktop/CodeShit/Websites/Top Shelf Chauffer v2/Top Shelf Chauffer Astro/src/images/DSC_0411.JPG');
         background-size: cover;
         font-size: 2rem;
@@ -94,31 +95,32 @@ const { title } = Astro.props;
 
     input, textarea {
         margin: 12px auto;
-        padding: 5px;
+        padding: 10px;
         width: 40%;
         border: 2px solid black;
         border-radius: 5px;
     }
 
-    textarea {
-        margin-bottom: 40px;
-    }
-
     #submit {
-        margin: 5px auto 25px;
         width: 40%;
-        height: 60px;
+        height: 100px;
         color: black;
         background-color: goldenrod;
         font-size: 1rem;
         font-weight: 500;
-        padding: 7px;
     }
 
     @media(max-width: 650px) {
+        * {
+            overflow-y: scroll;
+        }
 
-        #card {
-            width: 80vw;
+        .container {
+            height: 150vh;
+        }
+
+        #header {
+            height: auto;
         }
 
         input, textarea {
