@@ -71,7 +71,7 @@
 
     .button-container {
         width: 100%;
-        height: calc(100% - 40vh - 50px);
+        height:  calc(100% - 40vh - 50px);
         position: relative;
         background-color: transparent;
     }
@@ -86,24 +86,9 @@
         margin: 0;
         padding: 7px;
         position: absolute;
-        top: 40%;
+        bottom: 2rem;
+        top: 20%;
         left: 30%;
-    }
-
-    #intown-container .button-container {
-        height: 100%;
-    }
-
-    #intown-container button {
-        top: 25%;
-    }
-
-    #outoftown-container .button-container {
-        height: 100%;
-    }
-
-    #outoftown-container button {
-        top: 35%;
     }
 
     a, a:visited, a:link {
@@ -111,6 +96,24 @@
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: 800;
+    }
+
+
+
+    #intown-container .button-container {
+        height: 100%;
+    }
+
+    #intown-container button{
+        top: 18%;     
+    }
+
+    #outoftown-container .button-container {
+        height: 100%;
+    }
+
+    #outoftown-container button{
+        top: 30%;     
     }
 
     @media(max-width: 550px) {
